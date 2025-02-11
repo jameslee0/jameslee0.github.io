@@ -280,6 +280,15 @@
 					config.target.toggleClass(config.visibleClass);
 
 				});
+			
+			// Event:  Hide panel if a child tag points towards its ID when clicked.
+				$this.on('click', 'a[href="#' + id + '"]', function(event) {
+					event.preventDefault();
+					event.stopPropagation();
+
+					config.target.removeClass(config.visibleClass);
+
+					}); 
 
 		// Window.
 
